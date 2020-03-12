@@ -1,0 +1,54 @@
+intents:
+- greet
+- disease_address
+- mood_unhappy
+- deny
+- bot_challenge
+- affirm
+- goodbye
+- advice
+- disease
+- diease_address
+- diease
+entities:
+- address
+slots:
+  address:
+    type: text
+  matches:
+    type: unfeaturized
+templates:
+  utter_greet:
+  - text: 你好，请提问需要查询疫情的地点。特殊情况请相信党和国家并且保护好自己。
+  utter_working_on_it:
+  - text: 正在查询中，请稍后 ...
+  utter_goodbye:
+  - text: 再见！
+  - text: Bye
+  utter_ask_address:
+  - text: 请问咨询的是哪里呢？不要紧张
+  utter_report_disease:
+  - text: '{matches}'
+  utter_default:
+  - text: 我不太明白您说的话
+  utter_help_heppier:
+  - text: 别紧张，一切都会好的。如果很难受，可以在后台留言，小编会和你一直在一起
+  utter_bot_challenge:
+  - text: 我是一个机器人哦，但是后台小哥哥小姐姐也会尽最大努力帮助你排忧解难
+  utter_bot_ending:
+  - text: 需要的话可以继续提问具体城市的情况，我会竭尽所能告诉你的
+  utter_advice:
+  - text: 无事情不要乱跑，请在家里休息。可以玩游戏，看视频，学习看书，也可以调戏小编
+actions:
+- action_report_disease
+- action_report_general_disease
+- utter_ask_address
+- utter_help_heppier
+- utter_goodbye
+- utter_greet
+- utter_report_disease
+- utter_working_on_it
+- utter_bot_challenge
+- utter_default
+- utter_bot_ending
+- utter_advice
